@@ -18,7 +18,6 @@ projeto_oficina/
 ├── procedures.sql # Stored Procedures
 └── triggers.sql # Triggers do banco
 
-
 ---
 
 ## 🛠 Tecnologias utilizadas
@@ -32,8 +31,8 @@ projeto_oficina/
 
 ## ⚡ Funcionalidades
 
-- Criação de **10 tabelas** (clientes, veículos, ordens de serviço, serviços, peças, mecânicos, especialidades, fornecedores e tabelas de relacionamento).  
-- **Mapeamento ORM** com SQLAlchemy.  
+- Criação de **10 tabelas** (clientes, veículos, ordens de serviço, serviços, peças, mecânicos, especialidades, fornecedores e tabelas de relacionamento)  
+- **Mapeamento ORM** com SQLAlchemy  
 - **4 Stored Procedures**:
   - Inserir ordem de serviço  
   - Atualizar valor de OS  
@@ -49,24 +48,48 @@ projeto_oficina/
 ## 🚀 Como rodar
 
 1. Clonar o repositório:
+
 ```bash
 git clone https://github.com/JoaoNettoo/Projeto-BD-Oficina
+Criar e configurar o banco de dados oficina_db no MySQL
 
-2. Criar e configurar o banco de dados oficina_db no MySQL.
+Instalar dependências:
 
-3. Instalar dependências:
+bash
+Copiar código
 pip install sqlalchemy pymysql
+Testar a conexão:
 
-4. Testar a conexão:
+bash
+Copiar código
 python test_connection.py
+Inserir dados de teste:
 
-5. Inserir dados de teste:
+bash
+Copiar código
 python insert_test.py
-
 📌 Observações
+Antes de criar triggers que dependem de tabelas adicionais (ex.: logs_clientes), certifique-se de criar a tabela primeiro
 
-Antes de criar triggers que dependem de tabelas adicionais (ex.: logs_clientes), certifique-se de criar a tabela primeiro.
+Todas as procedures e triggers foram testadas no MySQL Workbench
 
-Todas as procedures e triggers foram testadas no MySQL Workbench.
+Para ver resultados, sempre use:
 
-Para ver resultados, sempre use SELECT * FROM tabela; ou CALL procedure();.
+sql
+Copiar código
+SELECT * FROM tabela;
+CALL procedure();
+yaml
+Copiar código
+
+---
+
+Se você quiser, eu posso fazer **uma versão ainda mais visual**, adicionando **emojis nas listas, blocos de código coloridos e instruções destacadas**, pra deixar o README com cara de projeto profissional.  
+
+Quer que eu faça isso?
+
+
+
+
+
+
